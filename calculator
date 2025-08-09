@@ -110,22 +110,22 @@ button:last-child {
 
 const display = document.getElementById('display');
 
-// Append value to display
+
 function append(value) {
   display.value += value;
 }
 
-// Clear display
+
 function clearDisplay() {
   display.value = '';
 }
 
-// Backspace
+
 function backspace() {
   display.value = display.value.slice(0, -1);
 }
 
-// Evaluate the result
+
 function calculate() {
   try {
     display.value = eval(display.value);
@@ -134,7 +134,7 @@ function calculate() {
   }
 }
 
-// Handle keyboard support
+
 document.addEventListener('keydown', (e) => {
   if ((e.key >= '0' && e.key <= '9') || "+-*/.%".includes(e.key)) {
     append(e.key);
